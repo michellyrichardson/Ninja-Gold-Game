@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    {% load static %}
+    <link rel='stylesheet' href='{% static "ninjagold.css" %}'>
+</head>
+<body>
+    <div id='wrapper'>
+        <label for='YourGold'>Your Gold:</label>
+        <input type='text' value={{request.session.gold}}>
+        </br> </br>
+        <div class='places'>
+            <fieldset class="fieldset-auto-width">
+            <h2>Farm</h2>
+            <h4>(earns 10-20 golds)</h4>
+            <a href='/farm'><button>Find Gold!</button></a>
+            </fieldset>
+        </div>
+        <div class='places'>
+            <fieldset class="fieldset-auto-width">
+            <h2>Cave</h2>
+            <h4>(earns 5-10 golds)</h4>
+            <a href='/cave'><button>Find Gold!</button></a>
+            </fieldset>
+        </div>
+        <div class='places'>
+            <fieldset class="fieldset-auto-width">
+            <h2>House</h2>
+            <h4>(earns 2-5 golds)</h4>
+            <a href='/house'><button>Find Gold!</button></a>
+            </fieldset>
+        </div>
+        <div class='places'>
+            <fieldset class="fieldset-auto-width">
+            <h2>Casino</h2>
+            <h4>(earns/takes 0-50 golds)</h4>
+            <a href='/casino'><button>Find Gold!</button></a>
+            </fieldset>
+        </div>
+        </br> 
+        <p>Activites:<p>
+        <fieldset class='text'>
+        <h4>Earned/Lost {{request.session.gold}} golds</h4>
+        </fieldset>
+    </div>
+</body>
+</html>
